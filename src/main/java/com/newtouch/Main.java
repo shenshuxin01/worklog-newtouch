@@ -21,13 +21,13 @@ public class Main {
         SimpleWorklogJob job = new SimpleWorklogJob();
         Date date = new Date();
         DateTime start = DateUtil.beginOfWeek(date);
-        DateTime end = DateUtil.endOfWeek(date);
+        DateTime end = start.offsetNew(DateField.DAY_OF_MONTH,4);
         //日报
         do {
-            job.execDayWork(start, "oms客户画像需求开发", token);
+            job.execDayWork(start, "oms行情对接xbond开发", token);
             start = DateUtil.offset(start, DateField.DAY_OF_MONTH, 1);
         } while (!start.isAfter(end));
         //周报
-        job.execWeekWork(DateUtil.beginOfWeek(date,true),"oms客户画像需求接口",token);
+        job.execWeekWork(DateUtil.beginOfWeek(date,true),"oms行情对接xbond开发接口",token);
     }
 }
