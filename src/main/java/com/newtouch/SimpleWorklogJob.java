@@ -67,7 +67,7 @@ public class SimpleWorklogJob implements WorklogJob{
         String body= """
                 {
                      "weekreportdate": "%s",
-                     "id": "7c5ec892f1b0dff70d079319d5e0b632",
+                     "id": "",
                      "unfinishwork": "上周工作任务已经完成，并且主要是java开发相关工作内容。",
                      "workproblem": "上周学习完成任务已经完成，学习项目相关业务知识。",
                      "remark": "通过参与项目%s的开发和学习，获取java开发经验和项目管理经验的收获",
